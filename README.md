@@ -22,6 +22,7 @@ The idea is to offer textual analysis and graphical content to present the resul
 # Dataset
 <a href="https://blog.gdeltproject.org/gdelt-2-0-our-global-world-in-realtime/"><b>GDELT v2.0</b></a>: The targeted dataset for this project is GDELT 2.0. Its exhaustive description of events around the globe provides tools to investigate the news coverage in different country. 
 All articles and citations comes with multiple indexes (confidence, tone, Goldstein scale) that provides great insights to get an idea of the polarity of the media or even the country.
+The Records are stored one per line, separated by a newline (\n) and are tab-delimited (although the files have a “.csv” extension, but are actually tab-delimited). The dataset that we will use for the project is a subset of the complete GDELT v2.0 dataset which has been stored on the ADA cluster and contains event records from February 2015 to November 2017.
 
 
 # A list of internal milestones up until project milestone 2
