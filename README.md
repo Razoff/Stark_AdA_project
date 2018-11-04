@@ -27,7 +27,7 @@ The Records are stored one per line, separated by a newline (\n) and are tab-del
 
 # A list of internal milestones up until project milestone 2
 - Data Cleaning: deal with empty cells, drop irrelevant columns, find interesting metrics.
-- Extracting relevant features that are useful for analyzing the degree of bias for each media.
+- Extracting relevant features that are useful for analyzing the degree of bias for each media coverage.
 - Checking the project hypothesis by sampling the data from one country and for the events with worldwide coverage.
 - Look at the graph algorithms to classify the news media into ones with high bias and low bias and visualize them.
 - Doing a case study on a few news media and investigate any patterns of how they try to hide the bias in the news and keep their credibility.
