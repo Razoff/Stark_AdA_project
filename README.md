@@ -30,7 +30,7 @@ The Records are stored one per line, separated by a newline (\n) and are tab-del
 - Extracting relevant features that are useful for analyzing the degree of bias for each media.
 - Checking the project hypothesis by sampling the data from one country and for the events with worldwide coverage.
 - Look at the graph algorithms to classify the news media into ones with high bias and low bias and visualize them.
-- Doing a case study on a few news media by looking into different categories of news and investigate any patterns of how they try to hide their bias and keep their credibility.
+- Doing a case study on a few news media and investigate any patterns of how they try to hide the bias in the news and keep their credibility.
 - Discuss the narrative of the story that we try to tell at the end of the project, and provide relevant visualizations to support that narrative.
 
 
