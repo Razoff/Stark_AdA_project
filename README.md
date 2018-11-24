@@ -24,6 +24,14 @@ The idea is to offer textual analysis and graphical content to present the resul
 All articles and citations comes with multiple indexes (confidence, tone, Goldstein scale) that provides great insights to get an idea of the polarity of the media or even the country.
 The Records are stored one per line, separated by a newline (\n) and are tab-delimited (although the files have a “.csv” extension, but are actually tab-delimited). The dataset that we will use for the project is a subset of the complete GDELT v2.0 dataset which has been stored on the ADA cluster and contains event records from February 2015 to November 2017.
 
+<a href="https://github.com/datasets/country-codes"><b>Country-codes</b></a>: This dataset holds country code information.
+In this project we are going to deal with worldwide coverage and sometimes the format kind be a little bit tricky. The csv file provided by this git repository offers an easy way to deal with different way of representing a country. Its main usage will be in helping the identification of a news sources through a website.
+
+<a href="https://github.com/johan/world.geo.json/tree/master/countries"><b>world.geo.json</b></a>: This git repository offers annotated geo-json geometry files for the world.
+The dataset will be used during the display of various event on a map. It works as follows: there is a one to one mapping from an ISO3166-1-Alpha-3 country code to a json file which once provided to good display library (in our case follium) draw any country's border. In our objectif of analysing world coverage of event this will come in very handy.  
+
+
+
 
 # A list of internal milestones up until project milestone 2
 - Data Cleaning: deal with empty cells, drop irrelevant columns, find interesting metrics.
