@@ -7,16 +7,19 @@ The goal of our project is to raise awareness of the potential bias of news sour
 The idea is to offer textual analysis and graphical content to present the results. We will include node graphs linking sources to one another and maps that will indicate the different characteristics of media coverage in different countries. 
 
 # Research questions
+
+With our work in milestone 2 we think we can answer the question below: 
 - How differently are international news covered depending on the country or the media? 
 
+By looking at the gkg dataset and using the themes of the article we will be able to answer the question below:
 - Which category of news tends to be framed or less covered depending on the country or the media?
 
-- How do media try to keep their credibility as a source of information, while introduce bias the news?
-
+However, we will need some more work to be able to answer the questions below:
 - How can we use the graph visualization to demonstrate the bias in the news sources?
-
 - What conclusions can we draw about systematic bias in different countries by studying its media coverage?
 
+Also given the data it will be hard to answer questions such as:
+- How do media try to keep their credibility as a source of information, while introduce bias the news?
 
 
 # Dataset
@@ -40,6 +43,20 @@ The dataset will be used during the display of various event on a map. It works 
 - Look at the graph algorithms to classify the news media into ones with high bias and low bias and visualize them.
 - Doing a case study on a few news media and investigate any patterns of how they try to hide the bias in the news and keep their credibility.
 - Discuss the narrative of the story that we try to tell at the end of the project, and provide relevant visualizations to support that narrative.
+
+# A list of internal milestones up until project milestone 3
+
+- Further study of the features: With milestone 2 we understood how to aggregate the data and its potential by making simple visualizations using a subset of the features. The next step is to make an exhaustive description and a statistical analysis of all of the features contained in the datasets, including the gkg dataset.
+
+- Biais measurement: One issue with our project is to have a way to mesure bias which can be done by using the "Average Tone" or "Goldstein Scale" however this isn't enough. It will be necessary to find a better measurement for bias. For instance we could think of ways to use either supervised or unsupervised machine learning algorithms to group news sources into clusters. This type of study will help us answer some of the questions we couldn't answer yet.
+
+- Visualizations: We will have to come up with news visualizations and choose the best ones to answer our different key questions. Instead of maps, we will also need to have more diversified visualizations such as bar charts and graphs.
+
+- Answer to the key questions: Using the the results of the previous step, we will ned to analyse the results and explain how we can notice biais in internation media coverage.
+
+- Create a website containing the data story: The idea is to aggreagate everyhting that we did in this project in the form a data story. We will create a website to showcase our visualizations and analysis with each key question getting us closer to answering the main reseach question.
+
+- Create a poster for the presentation: We will use everything we have done during the project to synthetize the main results in a poster format. 
 
 
 # Questions for TAa
