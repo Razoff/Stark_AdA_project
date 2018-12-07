@@ -37,15 +37,12 @@ MAP_PATH = DATA_PATH + "world.geo.json/countries/"
 COUNTRY_CODE_DATA = DATA_PATH + "country-codes/data/country-codes.csv"
 
 try:
-    day = sys.argv[1]
-    mounth = sys.argv[2]
-    year = sys.argv[3]
+    from_day = int(sys.argv[1])
+    to_day = int(sys.argv[2])
+    out_name = "./results/" + str(from_day) + "to" + str(to_day)
 except:
     print("Arguemnts should be like :")
-    print("python scraper.py 'day' 'mounth' 'year'")
-
-TOTAL_DAYS = int(day) + 30 * int(mounth) + 365 * int(year)
-print("Total days : " + str(TOTAL_DAYS))
+    print("python scraper.py 'From' 'to'")
 
 def isNaN(num):
     return num != num
@@ -115,11 +112,11 @@ mentions_df = pd.DataFrame(columns=col_men_list)
 
 # We filter out the urls keeping only those containing an export dataset
 df_ex_w01 = df_list[df_list['url'].str.contains('.export.CSV')]
-df_ex_w01 = df_ex_w01.iloc[:96*TOTAL_DAYS,2:3] #This will filter events for 7 days 
+df_ex_w01 = df_ex_w01.iloc[96*from_day:96*to_day,2:3] #This will filter events for 7 days 
 
 # We filter the urls keeping only those containing an export dataset
 df_men_w01 = df_list[df_list['url'].str.contains('.mentions.CSV')]
-df_men_w01 = df_men_w01.iloc[:96*TOTAL_DAYS,2:3] #This will filter events for 7 days
+df_men_w01 = df_men_w01.iloc[96*from_day:96*to_day,2:3] #This will filter events for 7 days
 
 print("Load data")
 
@@ -129,8 +126,8 @@ export_df, mentions_df = scrape_list(df_ex_w01['url'], df_men_w01['url'], export
 print("Save data")
 
 # Saving the resulted dataframes
-export_df.to_csv(os.path.join('results','export_df.csv'))
-mentions_df.to_csv(os.path.join('results','mentions_df.csv'))
+export_df.to_csv(out_name + "export.csv")
+mentions_df.to_csv(out_name + "mentions.csv")
 
 print("Load data form results")
 
