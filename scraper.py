@@ -128,10 +128,3 @@ print("Save data")
 # Saving the resulted dataframes
 export_df.to_csv(out_name + "export.csv")
 mentions_df.to_csv(out_name + "mentions.csv")
-
-print("Load data form results")
-
-# Loading the dataFrame
-export_df = pd.read_csv('results/export_df.csv', index_col=0)
-mentions_df = pd.read_csv('results/mentions_df.csv', index_col=0)
-
