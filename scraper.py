@@ -75,7 +75,7 @@ def scrape_list(url_ex, url_men, export_df, mentions_df):
         ## ... large dataFrame, we recursively call our function to use a new empty dataFrame for appending to achieve...
         ## ... much faster speed in scraping large number of dataframes
         if i>= 100:
-            level_f += 1
+            #level_f += 1
             export_df_2 = pd.DataFrame(columns=col_ex_list)
             mentions_df_2 = pd.DataFrame(columns=col_men_list)
             export_df_2, mentions_df_2 = scrape_list(url_ex.iloc[100:], url_men.loc[100:], export_df_2, mentions_df_2)
