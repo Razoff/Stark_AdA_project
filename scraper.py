@@ -33,7 +33,6 @@ from bokeh.models import WMTSTileSource
 hv.notebook_extension('bokeh')
 
 DATA_PATH = "data/"
-DATA_PATH = "data/"
 MAP_PATH = DATA_PATH + "world.geo.json/countries/"
 COUNTRY_CODE_DATA = DATA_PATH + "country-codes/data/country-codes.csv"
 
@@ -102,10 +101,6 @@ df_list=pd.read_csv(io.StringIO(s.decode('utf-8')), sep='\s', header=None, names
 
 df_list = df_list.dropna(subset=['url'])
 
-print(df_list['url'].head())
-
-print(df_list[df_list['url'].str.contains('.export.CSV')].head())
-
 # We get the columns names of the datasets from the text files we've created
 col_ex = get_export_names()
 col_men = get_mentions_names()
@@ -117,8 +112,6 @@ col_men_list = ['GlobalEventId', 'MentionSourceName', 'Confidence', 'MentionDocT
 # We create the empty the aggregated dataframes with the column names we want to keep
 export_df = pd.DataFrame(columns=col_ex_list)
 mentions_df = pd.DataFrame(columns=col_men_list)
-
-print(col_ex)
 
 # We filter out the urls keeping only those containing an export dataset
 df_ex_w01 = df_list[df_list['url'].str.contains('.export.CSV')]
