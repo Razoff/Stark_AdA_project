@@ -107,7 +107,7 @@ def scrape_list(url_ex, url_men, url_gkg, export_df, mentions_df, gkg_df):
                 #print("Export: ", export_df.shape, " - ",i)
                 #print("Mentions: ", mentions_df.shape, " - ",i)
                 #print("GKG: ", gkg_df.shape, " - ",i)
-                print("GKG: ", gkg_df.shape, " - ",i)
+                #print("GKG: ", gkg_df.shape, " - ",i)
                 #display(gkg_df.head(5))
                 
     return export_df, mentions_df, gkg_df
@@ -125,10 +125,10 @@ col_men = get_mentions_names()
 col_gkg = get_gkg_names()
 
 # We define create a list of the column names of the columns we want to keep in the datasets
-col_ex_list = ['GlobalEventID', 'Day', 'MounthYear', 'Year', 'ActionGeo_CountryCode', 'ActionGeo_Lat', 'ActionGeo_Long', 'GoldsteinScale', 'NumMentions']
+col_ex_list = ['GlobalEventID', 'Day', 'MounthYear', 'Year', 'ActionGeo_CountryCode', 'ActionGeo_Lat', 'ActionGeo_Long', 'GoldsteinScale', 'NumMentions','SOURCEURL\n']
 col_men_list = ['GlobalEventId', 'MentionSourceName', 'Confidence', 'MentionDocTone']
 col_gkg_list = ['GKGRECORDID', 'DATE', 'Counts', 'SourceCommonName', 'Locations', 'DocumentIdentifier', 'V2Themes', 'Themes', 'V2Tone'] # GKG
-
+# For col_ex_list, we don't need 'MounthYear' and 'Year', but please add 'SOURCEURL' column to it
 
 # We create the empty the aggregated dataframes with the column names we want to keep
 export_df = pd.DataFrame(columns=col_ex_list)
@@ -150,11 +150,11 @@ df_gkg_w01 = df_gkg_w01.iloc[96*from_day:96*to_day,2:3] #This will filter events
 print("Load data")
 
 # Parsing the data and returning the aggregated dataFrame
-export_df, mentions_df, gkg_df = scrape_list(df_ex_w01['url'], df_men_w01['url'], export_df, mentions_df, gkg_df)
+export_df, mentions_df, gkg_df = scrape_list(df_ex_w01['url'], df_men_w01['url'], df_gkg_w01['url'], export_df, mentions_df, gkg_df)
 
 print("Save data")
 
 # Saving the resulted dataframes
-export_df.to_csv(out_name + "export.csv")
-mentions_df.to_csv(out_name + "mentions.csv")
-gkg_df.to_csv(out_name + "gkg.csv")
+export_df.to_csv(out_name + "export.csv.gz", compression="gzip")
+mentions_df.to_csv(out_name + "mentions.csv.gz", compression="gzip")
+gkg_df.to_csv(out_name + "gkg.csv.gz", compression="gzip")
