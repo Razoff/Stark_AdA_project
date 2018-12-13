@@ -125,8 +125,8 @@ col_men = get_mentions_names()
 col_gkg = get_gkg_names()
 
 # We define create a list of the column names of the columns we want to keep in the datasets
-col_ex_list = ['GlobalEventID', 'Day', 'MounthYear', 'Year', 'ActionGeo_CountryCode', 'ActionGeo_Lat', 'ActionGeo_Long', 'GoldsteinScale', 'NumMentions','SOURCEURL']
-col_men_list = ['GlobalEventId', 'MentionSourceName', 'Confidence', 'MentionDocTone']
+col_ex_list = ['GlobalEventID', 'Day', 'MounthYear', 'Year', 'ActionGeo_CountryCode', 'ActionGeo_Lat', 'ActionGeo_Long', 'AvgTone', 'GoldsteinScale', 'NumMentions','SOURCEURL']
+col_men_list = ['GlobalEventId', 'MentionSourceName', 'MentionIdentifier', 'Confidence', 'MentionDocTone']
 col_gkg_list = ['GKGRECORDID', 'DATE', 'Counts', 'SourceCommonName', 'Locations', 'DocumentIdentifier', 'V2Themes', 'Themes', 'V2Tone'] # GKG
 # For col_ex_list, we don't need 'MounthYear' and 'Year', but please add 'SOURCEURL' column to it
 
