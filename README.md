@@ -66,8 +66,3 @@ The dataset will be used during the display of various event on a map. It works 
 
 - Create a poster for the presentation: We will use everything we have done during the project to synthetize the main results in a poster format. 
 
-
-# Questions for TAa
-- How can we get a general overview of the data that is on the cluster? and What is the period of time of the extracted data?
-- How can we extract relevant features from the naive features in the data set to measure the bias?
-- What graph algorithms and libraries can we use for extracting insightful information and visualizing them?
