@@ -1,7 +1,7 @@
 # Media Framing
 The bias in international news coverage
 
-- Link to the detailed codes for the project: https://github.com/Razoff/Stark_AdA_project/blob/master/Project_Pipeline.ipynb
+- Link to the detailed codes for the project: https://github.com/Razoff/Stark_AdA_project/blob/master/media_framing.ipynb
       
 - Link to the latest version on Google Drive (space issues): https://drive.google.com/a/epfl.ch/uc?id=1XUGA7UsE8zoIUoVnnNNHJEgn7IuXwM1A&export=download
 
